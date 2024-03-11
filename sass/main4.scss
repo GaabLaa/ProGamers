@@ -1,0 +1,373 @@
+@use "./main4colors" as colors;
+@use "./main4aniamtions" as *;
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 74px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: colors.$bg-color;
+	font-family: "Montserrat", sans-serif;
+}
+.blue-text {
+	color: colors.$main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 5px;
+	background-color: colors.$main-color;
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 5;
+
+	.navbar-toggler {
+		padding: 10px 15px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.nav-link,
+	.navbar-nav .nav-link.show,
+	.navbar-brand,
+	.fa-bars {
+		color: colors.$white;
+	}
+
+	.nav-link:focus,
+	.nav-link:hover,
+	// .navbar-brand:focus,
+	// .navbar-brand:hover,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .nav-link.show {
+		color: colors.$main-color;
+	}
+}
+
+header.hero-img {
+	position: relative;
+	height: 100vh;
+	background-image: url("../img/hero-small.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-transform: uppercase;
+	color: colors.$white;
+	z-index: 0;
+
+	.hero-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: colors.$white;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	.aboutus-hover {
+		transition: color 0.3s;
+	}
+	.aboutus-hover:hover {
+		color: colors.$main-color;
+	}
+}
+
+section.aboutus-hero {
+	position: relative;
+	height: 20%vh;
+	background-image: url("../img/aboutus-small.jpg");
+	background-position: center;
+	background-size: cover;
+	color: colors.$white;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+
+	.aboutus-hero-iteam {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+	}
+
+	.aboutus-hero-title {
+		font-size: 20px;
+	}
+}
+
+section.portfolio {
+	.carousel-indicators {
+		padding-bottom: 10px;
+	}
+	.carousel-item {
+		height: 600px;
+	}
+
+	.carousel-caption {
+		width: 100%;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+section.prices {
+	span {
+		font-weight: bold;
+	}
+
+	.price-box {
+		margin: 20px;
+		padding: 30px;
+		background-color: colors.$white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: 0.3s;
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+
+	.price-title {
+		color: colors.$main-color;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.price-tag {
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	.btn-secondary {
+		text-transform: uppercase;
+	}
+
+	.btn-secondary:hover {
+		background-color: colors.$main-color;
+		border: 2px solid colors.$main-color;
+	}
+}
+
+section.team {
+	position: relative;
+	background-image: url("../img/team/background.jpeg");
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.card {
+		margin: 0 20px;
+		transition: 0.3s;
+		z-index: 0;
+
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.card-body {
+			height: 160px;
+		}
+	}
+
+	.card:hover {
+		transform: scale(0.95);
+	}
+
+	.card-title {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.section-title {
+		color: colors.$white;
+	}
+
+	.card-footer {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.team-shadow {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -5;
+	}
+}
+
+section.achievements {
+	.achieve-card {
+		padding: 20px 0;
+
+		.fa-solid {
+			font-size: 40px;
+			text-shadow: 0 0 5px rgb(109, 104, 104);
+		}
+		.achievements-card-number {
+			font-size: 26px;
+		}
+
+		.achievements-card-text {
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+	}
+}
+
+section.contact {
+	position: relative;
+	background-image: url("../img/contact-big.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: colors.$white;
+	z-index: 0;
+
+	.underline {
+		background: colors.$white;
+	}
+
+	.contact-box{
+		display: flex;
+		align-items: center;
+		
+		.contact-iteam {
+			text-transform: uppercase;
+			margin: 30px 0;
+			
+			.contact-title{
+				letter-spacing: 2px;
+			}
+			
+			.fa-brands {
+				padding: 10px;
+				font-size: 24px;
+				color: colors.$white;
+				transition: color 0.3s;
+			}
+			
+			.fa-brands:hover {
+				color: colors.$main-color;
+			}
+		}
+	}
+
+	.contact-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -5;
+	}
+}
+
+@media (max-width: 576px) {
+	section.team {
+		.card {
+			img.card-img-top {
+				height: 200px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.hero-text {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+
+	.aboutus-hero {
+		background-image: url("../img/aboutus-big.jpg");
+	}
+}
+
+@media (min-width: 1200px) {
+	header.hero-img {
+		background-image: url("../img/hero-big.jpg");
+	}
+}
